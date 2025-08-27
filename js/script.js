@@ -8,7 +8,7 @@ function getId(id){
     return elements
 }
 
-const callbtns=document.getElementsByClassName('call-btn ')
+const callbtns=document.getElementsByClassName('call-btn')
 
 // call function
  for(const callbtn of callbtns){
@@ -46,4 +46,25 @@ const callbtns=document.getElementsByClassName('call-btn ')
     
 
  }
+
+ // Get all copy buttons
+const copybuttons = document.getElementsByClassName('copy-btn');
+
+for (const copybtn of copybuttons) {
+    copybtn.addEventListener('click', function() {
+       
+         const serviceNum=copybtn.parentNode.parentNode.children[3].innerHTML
+        navigator.clipboard.writeText(serviceNum)
+            .then(() => {
+                alert('কপি হয়েছে');
+            })
+            .catch(err => {
+                console.error('কপি হয় নি !!', err);
+            });
+    });
+}
+
+
+//  clear btn
+
 
