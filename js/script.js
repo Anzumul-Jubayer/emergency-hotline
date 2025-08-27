@@ -1,6 +1,6 @@
 
 const callHistory=[]
-
+const historyDiv=getId('call-history')
 // resuseable function
 
 function getId(id){
@@ -39,15 +39,20 @@ const callbtns=document.getElementsByClassName('call-btn')
           <p>${callData.time}</p>
          </div>
            </div>`
-    const historyDiv=getId('call-history')
+    
     historyDiv.appendChild(createDiv)
+    // clear-btn
+     getId('clear-btn').addEventListener('click',function(){
+    
+    createDiv.innerHTML=""
+})
     })
-   
+  
     
 
  }
 
- // Get all copy buttons
+ 
 const copybuttons = document.getElementsByClassName('copy-btn');
 
 for (const copybtn of copybuttons) {
@@ -65,6 +70,6 @@ for (const copybtn of copybuttons) {
 }
 
 
-//  clear btn
+
 
 
