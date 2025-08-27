@@ -10,9 +10,9 @@ function getId(id){
     return elements
 }
 
-const callbtns=document.getElementsByClassName('call-btn')
-
 // call function
+
+const callbtns=document.getElementsByClassName('call-btn')
  for(const callbtn of callbtns){
     callbtn.addEventListener('click',function(event){
         // coin alert
@@ -48,9 +48,8 @@ const callbtns=document.getElementsByClassName('call-btn')
     })
  }
 
- 
+// copy btn 
 const copybuttons = document.getElementsByClassName('copy-btn');
-
 for (const copybtn of copybuttons) {
     copybtn.addEventListener('click', function() {
        const copyValue=getId('copy-value')
