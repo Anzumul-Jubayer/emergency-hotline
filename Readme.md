@@ -1,13 +1,9 @@
 1.What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 Answer:
-getElementById          ||  getElementByClassName      || querySelector / querySelectorAll
------------------------    ----------------------        --------------------------------
-getElementById use for  || getElementByClassName use for|| querySelector returns first 
-catch the element of id.|| catch element of class. It   || elements that matches with the
-It always return single || always return collection of  || the css selector.
-element.                || HTML. It is look-like array  || querySelector returns ALL
-                        || but it is not. It called     || elements that matches with the
-                        || array like object            || the css selector.
+getElementById : getElementById use for catch the element of id.It always return single element.
+getElementByClassName: getElementByClassName use for catch element of class. It always return collection of HTML. It is look-like array but it is not. It called array like object .     
+querySelector : querySelector returns first elements that matches with the the css selector.
+querySelectorAll: querySelector returns ALL elements that matches with the the css selector.
 
 
 2.How do you create and insert a new element into the DOM?
