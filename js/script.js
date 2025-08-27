@@ -49,22 +49,20 @@ const callbtns=document.getElementsByClassName('call-btn')
  }
 
 // copy btn 
-const copybuttons = document.getElementsByClassName('copy-btn');
-for (const copybtn of copybuttons) {
-    copybtn.addEventListener('click', function() {
+const copyButtons = document.getElementsByClassName('copy-btn');
+for (const copyBtn of copyButtons) {
+    copyBtn.addEventListener('click', function() {
        const copyValue=getId('copy-value')
        const copyValueNum=Number(copyValue.innerText)
        const copyUVal=copyValueNum+1
        copyValue.innerText=copyUVal
     
-         const serviceNum=copybtn.parentNode.parentNode.children[3].innerHTML
+         const serviceNum=copyBtn.parentNode.parentNode.children[3].innerHTML
         navigator.clipboard.writeText(serviceNum)
             .then(() => {
                 alert('নাম্বার কপি হয়েছে : '+serviceNum);
             })
-            .catch(err => {
-                console.error('কপি হয় নি !!', err);
-            });
+           
 
             
     });
