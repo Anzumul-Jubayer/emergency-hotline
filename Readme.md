@@ -1,7 +1,7 @@
 1.What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 Answer:
 getElementById          ||  getElementByClassName      || querySelector / querySelectorAll
-
+-----------------------    ----------------------        --------------------------------
 getElementById use for  || getElementByClassName use for|| querySelector returns first 
 catch the element of id.|| catch element of class. It   || elements that matches with the
 It always return single || always return collection of  || the css selector.
