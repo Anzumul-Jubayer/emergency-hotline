@@ -72,14 +72,16 @@ for (const copybtn of copybuttons) {
 }
 
 // heart
-getId('heart-click').addEventListener('click',function(){
-    const heartValue=getId('heart-value')
-    let heartValueNum=Number(heartValue.innerText)
-    let newVal=heartValueNum+1
-    heartValue.innerText=newVal
-   
-})
+const heartClicks=document.getElementsByClassName('heart-click')
+ for(const heartClick of heartClicks){
+   heartClick.addEventListener('click',function(){
+       const heartValue=getId('heart-value')
+       const heartValueNum=Number(heartValue.innerText)
+       const newHeartValue=heartValueNum+1
+       heartValue.innerText=newHeartValue
+   })
 
+ }
 
 
 
