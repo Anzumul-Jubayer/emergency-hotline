@@ -2,7 +2,7 @@ const callHistory = [];
 const historyDiv = getId("call-history");
 let heartCount = 0;
 let copyCount = 0;
-// resuseable function
+// reuseable function
 
 function getId(id) {
   const elements = document.getElementById(id);
@@ -11,9 +11,9 @@ function getId(id) {
 
 // call function
 
-const callbtns = document.getElementsByClassName("call-btn");
-for (const callbtn of callbtns) {
-  callbtn.addEventListener("click", function (event) {
+const callBtns = document.getElementsByClassName("call-btn");
+for (const callBtn of callBtns) {
+  callBtn.addEventListener("click", function (event) {
     // coin alert
     const coinElement = getId("coin-count");
     const coinValue = Number(coinElement.innerText);
@@ -23,8 +23,8 @@ for (const callbtn of callbtns) {
     const uCoinValue = coinValue - 20;
     coinElement.innerText = uCoinValue;
     // call alert
-    const serviceName = callbtn.parentNode.parentNode.children[1].innerHTML;
-    const serviceNum = callbtn.parentNode.parentNode.children[3].innerHTML;
+    const serviceName = callBtn.parentNode.parentNode.children[1].innerHTML;
+    const serviceNum = callBtn.parentNode.parentNode.children[3].innerHTML;
     alert("📞Calling " + serviceName + " : " + serviceNum);
     // call history
     const callData = {
