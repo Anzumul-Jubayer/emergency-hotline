@@ -19,14 +19,14 @@ const callbtns=document.getElementsByClassName('call-btn')
         const coinElement=getId('coin-count')
         const coinValue= Number(coinElement.innerText)
         if(coinValue<20){
-         return alert("আপনার পর্যাপ্ত কয়েন নেই")
+         return alert("❌ আপনার পর্যাপ্ত কয়েন নেই")
         }
         const uCoinValue=coinValue-20
         coinElement.innerText=uCoinValue
         // call alert
         const serviceName=callbtn.parentNode.parentNode.children[1].innerHTML
         const serviceNum=callbtn.parentNode.parentNode.children[3].innerHTML
-        alert(serviceName+' :  '+serviceNum)
+        alert('📞Calling '+serviceName+' : '+serviceNum)
         // call history
         const callData={
             time: new Date().toLocaleTimeString()
@@ -60,7 +60,7 @@ for (const copybtn of copybuttons) {
          const serviceNum=copybtn.parentNode.parentNode.children[3].innerHTML
         navigator.clipboard.writeText(serviceNum)
             .then(() => {
-                alert('কপি হয়েছে');
+                alert('নাম্বার কপি হয়েছে : '+serviceNum);
             })
             .catch(err => {
                 console.error('কপি হয় নি !!', err);
