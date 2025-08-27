@@ -1,6 +1,8 @@
 
 const callHistory=[]
 const historyDiv=getId('call-history')
+let heartCount=0
+let copyCount=0
 // resuseable function
 
 function getId(id){
@@ -13,10 +15,7 @@ const callbtns=document.getElementsByClassName('call-btn')
 // call function
  for(const callbtn of callbtns){
     callbtn.addEventListener('click',function(event){
-        const serviceName=callbtn.parentNode.parentNode.children[1].innerHTML
-        const serviceNum=callbtn.parentNode.parentNode.children[3].innerHTML
-        alert(serviceName+' :  '+serviceNum)
-        console.log(serviceNum)
+        // coin alert
         const coinElement=getId('coin-count')
         const coinValue= Number(coinElement.innerText)
         if(coinValue<20){
@@ -24,7 +23,11 @@ const callbtns=document.getElementsByClassName('call-btn')
         }
         const uCoinValue=coinValue-20
         coinElement.innerText=uCoinValue
-
+        // call alert
+        const serviceName=callbtn.parentNode.parentNode.children[1].innerHTML
+        const serviceNum=callbtn.parentNode.parentNode.children[3].innerHTML
+        alert(serviceName+' :  '+serviceNum)
+        // call history
         const callData={
             time: new Date().toLocaleTimeString()
         }
@@ -41,15 +44,8 @@ const callbtns=document.getElementsByClassName('call-btn')
            </div>`
     
     historyDiv.appendChild(createDiv)
-    // clear-btn
-     getId('clear-btn').addEventListener('click',function(){
-    
-    createDiv.innerHTML=""
-})
+ 
     })
-  
-    
-
  }
 
  
@@ -57,7 +53,11 @@ const copybuttons = document.getElementsByClassName('copy-btn');
 
 for (const copybtn of copybuttons) {
     copybtn.addEventListener('click', function() {
-       
+       const copyValue=getId('copy-value')
+       const copyValueNum=Number(copyValue.innerText)
+       const copyUVal=copyValueNum+1
+       copyValue.innerText=copyUVal
+    
          const serviceNum=copybtn.parentNode.parentNode.children[3].innerHTML
         navigator.clipboard.writeText(serviceNum)
             .then(() => {
@@ -66,10 +66,27 @@ for (const copybtn of copybuttons) {
             .catch(err => {
                 console.error('কপি হয় নি !!', err);
             });
+
+            
     });
 }
 
+// heart
+getId('heart-click').addEventListener('click',function(){
+    const heartValue=getId('heart-value')
+    let heartValueNum=Number(heartValue.innerText)
+    let newVal=heartValueNum+1
+    heartValue.innerText=newVal
+   
+})
 
 
+
+
+// clear-btn
+  getId('clear-btn').addEventListener('click',function(){
+     historyDiv.innerHTML=""
+})
+ 
 
 

@@ -41,11 +41,11 @@
             Emergency Service
           </h1>
         </div>
-        <div class="flex mt-5 md:mt-0 gap-3 md:gap-8">
+        <div class="flex mt-5 md:mt-0 gap-3 md:gap-8 px-3 md:px-0 ">
           <div
             class="flex items-center gap-2 bg-[#41ff6b1a] px-7 py-3 rounded-[50px]"
           >
-            <p class="block font-bold">0</p>
+            <p id="heart-value" class="block font-bold">0</p>
             <img src="./assets/heart.png" alt="" class="w-[30px]" />
           </div>
           <div
@@ -57,7 +57,7 @@
           <div
             class="flex items-center bg-[#00a63e] gap-2 px-7 py-3 rounded-[50px]"
           >
-            <p class="block text-white">0</p>
+            <p id="copy-value" class="block text-white">0</p>
             <p class="block text-white">Copy</p>
           </div>
         </div>
@@ -83,16 +83,16 @@
     <!-- main -->
     <main class="bg-[#f5fff6] ">
       <section class=" grid grid-cols-2 md:grid-cols-4 gap-3  md:gap-5 max-w-[1700px] mx-auto py-20 px-5 md:px-20">
-        <div class="lg:col-span-3">
+        <div class="md:col-span-3">
             <!-- card -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="bg-white shadow-sm p-3  md:p-5 rounded-lg">
           <div class="flex justify-between items-center">
             <div class="bg-[#FFE3E2] p-3 rounded-lg">
             <img src="./assets/emergency.png" alt="" class="w-[30px]" />
              </div>
           <div>
-            <i class="fa-regular fa-heart text-gray-400"></i>
+            <i id="heart-click" class="fa-regular fa-heart text-gray-400"></i>
           </div>
           </div>
           <h2 class="text-xl font-bold mt-2">জাতীয় জরুরি সেবা</h2>
@@ -285,7 +285,7 @@
         
         </div>
         <!--call history -->
-         <div id="call-history" class="bg-white shadow-sm  rounded-lg p-5 w-full">
+         <div class="bg-white shadow-sm  rounded-lg p-5 w-full">
            <div class="flex flex-col md:flex-row md:justify-between items-center">
               <div class="flex  items-center gap-2">
                 <i class="fa-regular fa-clock md:text-xl"></i>
@@ -293,7 +293,7 @@
               </div>
               <button id="clear-btn" class="bg-green-600 text-white px-8 py-2 rounded-2xl mt-5 md:mt-0">Clear</button>
            </div>
-           <div id="clear">
+           <div id="call-history">
 
            </div>
            
