@@ -1,7 +1,6 @@
 const callHistory = [];
 const historyDiv = getId("call-history");
-let heartCount = 0;
-let copyCount = 0;
+
 // reuseable function
 
 function getId(id) {
